@@ -22,4 +22,10 @@ describe('Park', function() {
    assert.strictEqual(park.numberOfDinosInEnclosure(), 1);
  })
 
+ it('should be able to remove dinos per type', function () {
+  park.addToEnclosure(dino2);
+  park.removeFromEnclosure('Triceratops');
+  assert.strictEqual(park.numberOfDinosInEnclosure(), 0);
+})
+
 });
